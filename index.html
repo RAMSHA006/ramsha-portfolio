@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ramsha | Frontend Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,156 +16,345 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#0f172a;
 color:white;
+overflow-x:hidden;
 }
 
+/* ================= HEADER ================= */
+
 header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#111827;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
-background:#111827;
-position:sticky;
-top:0;
+padding:18px 8%;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.35);
+
 }
 
 .logo{
-font-size:28px;
-font-weight:bold;
+
+font-size:30px;
+font-weight:700;
 color:#38bdf8;
+letter-spacing:1px;
+
+}
+
+nav{
+
+display:flex;
+align-items:center;
+gap:25px;
+
 }
 
 nav a{
+
 text-decoration:none;
 color:white;
-margin-left:25px;
+font-size:16px;
+font-weight:500;
 transition:.3s;
+
 }
 
 nav a:hover{
+
 color:#38bdf8;
+
 }
 
+/* ================= HERO ================= */
+
 .hero{
+
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:90vh;
 text-align:center;
-padding:20px;
+padding:120px 20px 60px;
+
+}
+
+.hero-content{
+
+max-width:800px;
+
 }
 
 .hero h1{
-font-size:55px;
+
+font-size:58px;
+margin-bottom:20px;
+line-height:1.2;
+
 }
 
-.hero h1 span{
+.hero span{
+
 color:#38bdf8;
+
 }
 
 .hero p{
-margin-top:20px;
-font-size:20px;
-color:#cbd5e1;
+
+font-size:21px;
+color:#d1d5db;
+line-height:1.8;
+
 }
 
 .btn{
+
 display:inline-block;
-margin-top:30px;
-padding:15px 35px;
+margin-top:35px;
+padding:15px 40px;
 background:#38bdf8;
-color:black;
+color:#0f172a;
 text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-transition:.3s;
+border-radius:50px;
+font-weight:700;
+transition:.35s;
+
 }
 
 .btn:hover{
-transform:scale(1.08);
+
+transform:translateY(-5px);
+box-shadow:0 0 20px #38bdf8;
+
 }
 
+/* ================= SECTION ================= */
+
 section{
-padding:80px 10%;
+
+padding:90px 8%;
+
 }
 
 h2{
-font-size:38px;
-margin-bottom:30px;
-color:#38bdf8;
+
 text-align:center;
+font-size:40px;
+color:#38bdf8;
+margin-bottom:40px;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+padding:15px;
+
+}
+
+.logo{
+
+margin-bottom:15px;
+font-size:26px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+
+}
+
+.hero{
+
+padding-top:170px;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+h2{
+
+font-size:32px;
+
+}
+
+section{
+
+padding:70px 20px;
+
+}
+
+.btn{
+
+padding:13px 28px;
+font-size:15px;
+
+}
+
+}
+/* ================= ABOUT ================= */
+
+.about{
+
+text-align:center;
+
 }
 
 .about p{
+
+max-width:900px;
+margin:auto;
 font-size:18px;
 line-height:32px;
-text-align:center;
 color:#d1d5db;
+
 }
 
+/* ================= SKILLS ================= */
+
 .skills{
+
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
+gap:25px;
 margin-top:40px;
+
 }
 
 .skill{
+
 background:#1e293b;
 padding:25px;
-border-radius:12px;
+border-radius:15px;
 text-align:center;
 font-size:20px;
-transition:.3s;
+font-weight:600;
+transition:.4s;
+cursor:pointer;
+
 }
 
 .skill:hover{
+
+background:#38bdf8;
+color:#0f172a;
 transform:translateY(-10px);
+
 }
 
+/* ================= PROJECTS ================= */
+
 .projects{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
+
 }
 
 .project{
+
 background:#1e293b;
-padding:25px;
-border-radius:12px;
+padding:30px;
+border-radius:15px;
+transition:.4s;
+
+}
+
+.project:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(56,189,248,.4);
+
 }
 
 .project h3{
-margin-bottom:15px;
+
 color:#38bdf8;
+margin-bottom:15px;
+font-size:24px;
+
 }
+
+.project p{
+
+color:#d1d5db;
+line-height:28px;
+
+}
+
+/* ================= CERTIFICATE ================= */
 
 .certificate{
+
 background:#1e293b;
-padding:35px;
-border-radius:12px;
+padding:30px;
+border-radius:15px;
 text-align:center;
-font-size:20px;
+
 }
 
+.certificate img{
+
+width:100%;
+max-width:600px;
+border-radius:12px;
+
+}
+
+/* ================= CONTACT ================= */
+
 .contact{
+
 text-align:center;
+
 }
 
 .contact p{
-margin:12px;
-font-size:20px;
+
+font-size:18px;
+margin:15px 0;
+color:#d1d5db;
+
 }
 
+/* ================= FOOTER ================= */
+
 footer{
+
 background:#111827;
-padding:20px;
 text-align:center;
-margin-top:50px;
+padding:25px;
+margin-top:40px;
+color:#d1d5db;
+
 }
 
 </style>
@@ -177,27 +368,34 @@ margin-top:50px;
 <div class="logo">Ramsha</div>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#certificate">Certificate</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
 
 <section class="hero">
 
-<div>
+<div class="hero-content">
 
 <h1>Hello, I'm <span>Ramsha</span></h1>
 
-<p>Software Engineering Student | Frontend Developer</p>
+<p>
 
-<a  href="ramsha cv.docx" target="_blank" class="btn">
-    Download CV
-</a>
+Software Engineering Student | Frontend Developer
+
+</p>
+
+<a href="ramsha cv.docx" class="btn" download>
+
+Download CV
+
 </a>
 
 </div>
@@ -211,11 +409,11 @@ margin-top:50px;
 <p>
 
 I am a Software Engineering student passionate about Frontend Development.
-I enjoy creating responsive and user-friendly websites using HTML, CSS,
-JavaScript and React.js.
+I enjoy building responsive and user-friendly websites using HTML, CSS,
+JavaScript, Bootstrap and React.js.
 
-I have also completed a Web Development Certificate from NED University,
-which strengthened my practical web development skills.
+I have completed a Web Development Certificate from NED University and
+I continuously improve my skills by building real-world projects.
 
 </p>
 
@@ -223,25 +421,25 @@ which strengthened my practical web development skills.
 
 <section id="skills">
 
-<h2>Skills</h2>
+<h2>My Skills</h2>
 
 <div class="skills">
 
-<div class="skill">HTML</div>
+<div class="skill">HTML5</div>
 
-<div class="skill">CSS</div>
+<div class="skill">CSS3</div>
 
 <div class="skill">JavaScript</div>
 
-<div class="skill">React.js</div>
-
 <div class="skill">Bootstrap</div>
+
+<div class="skill">React.js</div>
 
 <div class="skill">Git</div>
 
-<div class="skill">Responsive Design</div>
-
 <div class="skill">GitHub</div>
+
+<div class="skill">Responsive Design</div>
 
 </div>
 
@@ -255,44 +453,51 @@ which strengthened my practical web development skills.
 
 <div class="project">
 
-<h3>Responsive Portfolio</h3>
+<h3>Portfolio Website</h3>
 
-<p>A modern responsive portfolio website using HTML, CSS and JavaScript.</p>
-
-</div>
-
-<div class="project">
-
-<h3>To Do App</h3>
-
-<p>Task management application using JavaScript.</p>
+<p>
+Modern responsive portfolio built using HTML, CSS and JavaScript.
+</p>
 
 </div>
 
 <div class="project">
 
-<h3>Weather App</h3>
+<h3>Beauty Product Website</h3>
 
-<p>Weather application using API integration.</p>
+<p>
+Responsive e-commerce frontend website with attractive UI.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Traffic Deadlock System</h3>
+
+<p>
+Academic project focused on solving traffic management problems.
+</p>
 
 </div>
 
 </div>
 
 </section>
-
 <section id="certificate">
 
 <h2>NED Certificate</h2>
 
 <div class="certificate">
 
-<p>
-
 <img src="ned certificate.jpeg"
-     alt="NED Web Development Certificate"
-     width="500"
-     style="margin-top:20px; border-radius:10px;">
+alt="NED Web Development Certificate">
+
+<p style="margin-top:20px;font-size:18px;color:#d1d5db;">
+
+Successfully completed Web Development Certification from
+NED University and gained practical experience in
+HTML, CSS, JavaScript and Responsive Web Design.
 
 </p>
 
@@ -302,62 +507,63 @@ which strengthened my practical web development skills.
 
 <section id="contact" class="contact">
 
-<h2>Contact</h2>
+<h2>Contact Me</h2>
 
-<p>📧 ramshww006@gmail.com</p>
+<p>📧 Email: ramshww006@gmail.com</p>
 
-<p>📞 0341-3993316</p>
+<p>📞 Phone: 0341-3993316</p>
 
 <p>📍 Karachi, Pakistan</p>
+
+<div style="margin-top:35px;">
+
+<a href="mailto:ramshww006@gmail.com" class="btn">
+Email Me
+</a>
+
+<a href="https://github.com/RAMSHA006"
+target="_blank"
+class="btn"
+style="margin-left:15px;">
+GitHub
+</a>
+
+</div>
 
 </section>
 
 <footer>
-  <script>
 
-// Typing Effect
+<p>
 
-const text = "Hello, I'm Ramsha";
-let index = 0;
+© 2026 Ramsha | Frontend Developer
 
-function typeEffect(){
+</p>
 
-if(index < text.length){
+</footer>
 
-document.getElementById("typing").innerHTML += text.charAt(index);
+<script>
 
-index++;
+// Smooth Fade Animation
 
-setTimeout(typeEffect,100);
+const sections=document.querySelectorAll("section");
 
-}
+const observer=new IntersectionObserver((entries)=>{
 
-}
+entries.forEach(entry=>{
 
-// Scroll Animation
+if(entry.isIntersecting){
 
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(section=>{
-
-const position = section.getBoundingClientRect().top;
-
-const screen = window.innerHeight;
-
-if(position < screen-150){
-
-section.style.opacity="1";
-section.style.transform="translateY(0px)";
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0px)";
 
 }
 
 });
 
+},{
+threshold:0.2
 });
-
-// Initial Style
 
 sections.forEach(section=>{
 
@@ -365,55 +571,65 @@ section.style.opacity="0";
 
 section.style.transform="translateY(60px)";
 
-section.style.transition="1s";
+section.style.transition="all 1s ease";
+
+observer.observe(section);
 
 });
 
-// Button Animation
+// Navbar Active Effect
 
-const btn=document.querySelector(".btn");
+const navLinks=document.querySelectorAll("nav a");
 
-btn.addEventListener("mouseover",()=>{
+navLinks.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navLinks.forEach(a=>a.style.color="white");
+
+link.style.color="#38bdf8";
+
+});
+
+});
+
+// Button Glow
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("mouseenter",()=>{
 
 btn.style.boxShadow="0 0 25px #38bdf8";
 
 });
 
-btn.addEventListener("mouseout",()=>{
+btn.addEventListener("mouseleave",()=>{
 
 btn.style.boxShadow="none";
 
 });
 
+});
+
 // Skill Hover
 
-const skills=document.querySelectorAll(".skill");
-
-skills.forEach(skill=>{
+document.querySelectorAll(".skill").forEach(skill=>{
 
 skill.addEventListener("mouseenter",()=>{
 
-skill.style.background="#38bdf8";
-
-skill.style.color="black";
+skill.style.transform="translateY(-10px) scale(1.05)";
 
 });
 
 skill.addEventListener("mouseleave",()=>{
 
-skill.style.background="#1e293b";
-
-skill.style.color="white";
+skill.style.transform="translateY(0px) scale(1)";
 
 });
 
 });
 
 </script>
-
-© 2026 Ramsha | Frontend Developer
-
-</footer>
 
 </body>
 
